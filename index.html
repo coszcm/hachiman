@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn1">带土</button>
+    <button class="btn1">琳</button> <br>
+    <img src="https://img1.baidu.com/it/u=2602197463,3904470363&fm=253&fmt=auto&app=138&f=PNG?w=400&h=221" alt="" width="500px" height="300px">
+    <script>
+        var btn1 = document.getElementsByClassName('btn1')
+        // var btn2 = document.getElementsByClassName('btn2')
+        var img = document.querySelector('img')
+        btn1[1].onclick = function(){
+            img.src = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F11419048053%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665843019&t=e9fd35d057995e004cdb2cb357d1568d'
+        }
+        btn1[0].onclick = function(){
+            img.src = "https://img1.baidu.com/it/u=2602197463,3904470363&fm=253&fmt=auto&app=138&f=PNG?w=400&h=221"
+        }
+    </script>
+</body>
+</html>
