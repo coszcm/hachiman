@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-    <style>
+<style>
     *{
         margin: 0;
         padding: 0;
@@ -36,13 +36,21 @@
         margin-left: 200px;
     }
 
+    img{
+        margin-left: 200px;
+    }
+    .big{
+        display: block;
+        width: 800px;
+        text-align: center;
+        font-size: 50px;
+        margin: 30px;
+        color: blue;
+    }
 </style>
 
 <body>
-    <button class="btn1">带土</button>
-    <button class="btn1">琳</button> <br>
-    <img src="https://img1.baidu.com/it/u=2602197463,3904470363&fm=253&fmt=auto&app=138&f=PNG?w=400&h=221" alt="" width="500px" height="300px">
-    
+    <zcm class="big">左哥的小测试</zcm>
     <div class="box" style=" width:800px">
         <p style=" width:800px"></p>
         <span>0%</span>
@@ -51,10 +59,13 @@
     <button>停止</button>
     <button>重置</button>
     <br><br><br><br><br>
-    <button>左边</button>
+    <button>空白</button>
     <button>开始</button>
-    <button>右边</button>
-    
+    <button>空白</button><br><br><br><br>
+
+    <button class="btn1">带土</button>
+    <button class="btn1">琳</button> <br>
+    <img src="https://img1.baidu.com/it/u=2602197463,3904470363&fm=253&fmt=auto&app=138&f=PNG?w=400&h=221" alt="" width="500px" height="300px">
     <script>
         var btn1 = document.getElementsByClassName('btn1')
         // var btn2 = document.getElementsByClassName('btn2')
@@ -65,7 +76,7 @@
         btn1[0].onclick = function(){
             img.src = "https://img1.baidu.com/it/u=2602197463,3904470363&fm=253&fmt=auto&app=138&f=PNG?w=400&h=221"
         }
-     
+    </script>
     <script>
         
         var div = document.querySelector('div')
@@ -75,7 +86,7 @@
         var num = 0; 
         
         var timer = null;
-        btn[2].onclick = function(){
+        btn[0].onclick = function(){
             clearInterval(timer)
             
 
@@ -95,19 +106,19 @@
             },20); 
                 
         }
-        btn[3].onclick = function(){
+        btn[1].onclick = function(){
             clearInterval(timer);
         }
-        btn[5].onclick = function(){
+        btn[2].onclick = function(){
             clearInterval(timer);
             span.innerHTML = '0%'
             p.style.width = '0px'
             num = 0;
         }
         var flage = true;
-        btn[6].onclick = function(){14
+        btn[4].onclick = function(){14
             if(flage){
-                btn[6].innerHTML='暂停'
+                btn[4].innerHTML='暂停'
                 flage = false;
                 timer = setInterval(function(){
                 
@@ -125,7 +136,7 @@
             
             }
             else{
-                btn[6].innerHTML='开始'
+                btn[4].innerHTML='开始'
                 flage = true;
                 clearInterval(timer);
             }
