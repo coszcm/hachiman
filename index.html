@@ -35,7 +35,7 @@
     }
     main>.right{
         flex: 1;
-        background-color: rgb(10, 110, 83);
+        background-color: rgba(10, 110, 83,.8);
 
     }
 /* 留言板 */
@@ -177,10 +177,11 @@
 
     <script>
         //1. 获取元素
+        var main = document.querySelector('main')
         var imgs = document.querySelector('.baidu').querySelectorAll('img')
         for (var i = 0; i < imgs.length; i++) {
             imgs[i].onclick = function () {
-                document.body.style.backgroundImage = 'url(' + this.src + ')'
+                main.style.backgroundImage = 'url(' + this.src + ')'
             }
         }
     </script>
