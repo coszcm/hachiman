@@ -4,149 +4,251 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>xiaozuo</title>
 </head>
 <style>
+    .head{
+        height: 100px;
+        font-size: 75px;
+        color: aqua;
+        text-align: center;
+        line-height: 100px;
+    }
+    main{
+        display: flex;
+        margin-top: 50px;
+    }
+    main>.left{
+        flex: 1;
+        /* background-color: aquamarine; */
+    }
+    main>.middle{
+        flex: 3;
+        /* background-color: rgb(193, 53, 78); */
+
+    }
+    main>.right{
+        flex: 1;
+        background-color: rgb(10, 110, 83);
+
+    }
+/* 留言板 */
+.block>.box>ul {
+        width: 500px;
+        height: 300px;
+        border: solid 5px green;
+        padding: 0;
+        border-radius: 20px;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    .block>.box>ul>li {
+        padding: 10px;
+        position: relative;
+        list-style: none;
+        word-wrap: break-word;
+        width: 400px;
+        margin: 2px 90px 25px 10px;
+        border: 4px double skyblue;
+        color: #b0b0b0;
+        border-radius: 5px;
+    }
+
+    .block>.box>ul>li>span {
+        position: absolute;
+        font-size: 16px;
+        border: 1px solid #b0b0b0;
+        color: black;
+        right: -51px;
+        bottom: -4px;
+        cursor: pointer;
+
+
+    }
+
+    .block>.box>ul>li>span:hover {
+        background-color: red;
+    }
+
+    .block>.box>ul>li>p {
+        position: absolute;
+        left: 0;
+        bottom: -40px;
+        font-size: 14px;
+
+    }
+    .block>.box>ul>li>div{
+        position: absolute;
+        right: 0;
+        font-size: 14px;
+        bottom: -26px;
+    }
+    #lyz {
+        margin: 10px 0;
+        outline: none;
+    }
+
+    #input {
+        resize: none;
+        outline: none;
+        vertical-align: bottom;
+        width: 260px;
+        border-radius: 10px;
+        
+
+    }
+
+    .block>button {
+        vertical-align: bottom;
+        cursor: pointer;
+    }
+    /* 测试背景 */
+     html,body{
+        height: 100%;
+    }
     *{
         margin: 0;
         padding: 0;
     }
-    .box{
-        position: relative;
-        height: 30px;
-        border: 5px solid red;
-        border-radius: 20px;
-        text-align: center;
-        line-height: 30px;
+    body{
+        background:url('https://img1.baidu.com/it/u=552723608,1301911860&fm=253&fmt=auto&app=138&f=PNG?w=841&h=479') no-repeat center top / 100% 100%;
     }
-    .box p{
-        height: 30px;
-        border-radius: 15px;
-        background-color: aqua;
+    li{
+        list-style: none;
     }
-    .box span{
-        position: absolute;
+    .baidu{
+        position: fixed;
         left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
+        top: 50px;
+        overflow: hidden;
+        margin: 100px auto;
+        background-color: #fff;
+        width: 410px;
+        padding-top: 3px;
     }
-    button{
-        margin-left: 200px;
+    .baidu li{
+        float: left;
+        margin: 0 1px;
+        cursor: pointer;
     }
-
-    img{
-        margin-left: 200px;
-    }
-    .big{
-        display: block;
-        width: 800px;
-        text-align: center;
-        font-size: 50px;
-        margin: 30px;
-        color: blue;
+    .baidu img{
+        width: 100px;
     }
 </style>
-
 <body>
-    <zcm class="big">左哥的小测试</zcm>
-    <div class="box" style=" width:800px">
-        <p style=" width:800px"></p>
-        <span>0%</span>
-    </div><br><br><br>
-    <button>开始</button>
-    <button>停止</button>
-    <button>重置</button>
-    <br><br><br><br><br>
-    <button>空白</button>
-    <button>开始</button>
-    <button>空白</button><br><br><br><br>
+    <div class="head">
+        这是一个小测试
+    </div>
+    <main>
+        <div class="left">
+            
+        </div>
+        <div class="middle">
+            <ul class="baidu">
+                <li><img src="https://img1.baidu.com/it/u=552723608,1301911860&fm=253&fmt=auto&app=138&f=PNG?w=841&h=479" alt="">
+                </li>
+                <li><img src="https://img0.baidu.com/it/u=2665921210,415074716&fm=253&fmt=auto&app=120&f=PNG?w=688&h=419" alt="">
+                </li>
+                <li><img src="https://img1.baidu.com/it/u=1590240526,2127199302&fm=253&fmt=auto&app=120&f=PNG?w=800&h=500" alt="">
+                </li>
+                <li><img src="https://img1.baidu.com/it/u=295229279,4126642408&fm=253&fmt=auto&app=138&f=JPG?w=400&h=226" alt="">
+                </li>
+            </ul>
+        </div>
+        <div class="right">
+            <div class="block">
+                留言者：<input type="text" placeholder="请输入你的id" id="lyz"><br>
+                <textarea name="" id="input" cols="30" rows="10" placeholder="请输入你要留言的内容："></textarea> <button>发送</button>
+                <div class="box">
+                    <ul>
+                    </ul>
+                </div>
+            </div>
 
-    <button class="btn1">带土</button>
-    <button class="btn1">琳</button> <br>
-    <img src="https://img1.baidu.com/it/u=2602197463,3904470363&fm=253&fmt=auto&app=138&f=PNG?w=400&h=221" alt="" width="500px" height="300px">
+        </div>
+    </main>
+
     <script>
-        var btn1 = document.getElementsByClassName('btn1')
-        // var btn2 = document.getElementsByClassName('btn2')
-        var img = document.querySelector('img')
-        btn1[1].onclick = function(){
-            img.src = 'https://gimg2.baidu.com/image_search/src=http%3A%2F%2Finews.gtimg.com%2Fnewsapp_bt%2F0%2F11419048053%2F1000.jpg&refer=http%3A%2F%2Finews.gtimg.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=auto?sec=1665843019&t=e9fd35d057995e004cdb2cb357d1568d'
-        }
-        btn1[0].onclick = function(){
-            img.src = "https://img1.baidu.com/it/u=2602197463,3904470363&fm=253&fmt=auto&app=138&f=PNG?w=400&h=221"
+        //1. 获取元素
+        var imgs = document.querySelector('.baidu').querySelectorAll('img')
+        for (var i = 0; i < imgs.length; i++) {
+            imgs[i].onclick = function () {
+                document.body.style.backgroundImage = 'url(' + this.src + ')'
+            }
         }
     </script>
+
+
     <script>
-        
-        var div = document.querySelector('div')
-        var btn = document.querySelectorAll('button');
-        var p = document.querySelector('p');
-        var span = document.querySelector('div span');
-        var num = 0; 
-        
-        var timer = null;
-        btn[0].onclick = function(){
-            clearInterval(timer)
-            
+        var input = document.querySelector('#input');
+        var btn = document.querySelector('button');
+        var ul = document.querySelector('.block>.box>ul');
+        var lyz = document.querySelector('#lyz');
 
-            
-            timer = setInterval(function(){
-                
-                num =num+getFW(1,5);
 
-                p.style.width = num+'px';
-                span.innerHTML = (num*100/parseInt(div.style.width)).toFixed(2)+'%'
-                if(num>=800){
-                    p.style.width = div.style.width;
-                    span.innerHTML = '100%'
-                    clearInterval(timer)
+
+
+        btn.onclick = function () {
+            if (input.value === '') {
+                alert('此输入不能为空')
+            } else {
+
+
+
+                var lis = document.createElement('li');
+                lis.innerHTML = input.value;
+                ul.insertBefore(lis, ul.firstElementChild)
+                // var liss = document.querySelector('li');
+
+                var span = document.createElement('span');
+                span.onclick = function () {
+                    ul.removeChild(lis)
                 }
-                
-            },20); 
-                
-        }
-        btn[1].onclick = function(){
-            clearInterval(timer);
-        }
-        btn[2].onclick = function(){
-            clearInterval(timer);
-            span.innerHTML = '0%'
-            p.style.width = '0px'
-            num = 0;
-        }
-        var flage = true;
-        btn[4].onclick = function(){14
-            if(flage){
-                btn[4].innerHTML='暂停'
-                flage = false;
-                timer = setInterval(function(){
-                
-                num =num+getFW(1,5);
+                lis.appendChild(span);
+                span.innerHTML = '删除'
 
-                p.style.width = num+'px';
-                span.innerHTML = (num*100/parseInt(div.style.width)).toFixed(2)+'%'
-                if(num>=800){
-                    p.style.width = div.style.width;
-                    span.innerHTML = '100%'
-                    clearInterval(timer)
+
+
+
+                var ps = document.createElement('p');
+                lis.appendChild(ps);
+                console.log(ps);
+                if (lyz.value == '') {
+                    ps.innerText = '匿名者:'
+                } else {
+                    ps.innerText = lyz.value + ':'
+                    console.log(lyz.value);
                 }
-                
-                },20); 
-            
             }
-            else{
-                btn[4].innerHTML='开始'
-                flage = true;
-                clearInterval(timer);
-            }
-            
-        }
-        
 
-        function getFW(min,max){
-            return Math.floor(Math.random()*(max-min+1)+min);
+            var date = new Date();
+            var year = date.getFullYear();
+            var month = date.getMonth() + 1;
+            var dates = date.getDate();
+            var hours = date.getHours();
+            var minutes = date.getMinutes();
+            var seconds = date.getSeconds();
+            var now = '' + year + '-' + get0(month) + '-' + get0(dates) + '&emsp;' + get0(hours) + ':' + get0(minutes) + ':' + get0(seconds)
+
+            console.log(now);
+
+
+
+
+            var time = document.createElement('div');
+            lis.appendChild(time);
+            time.innerHTML = now
+
+            function get0(n) {
+                return n < 10 ? '0' + n : n;
+            }
+
+            input.value = ''
+
         }
+
+
 
     </script>
 </body>
